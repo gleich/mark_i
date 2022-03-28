@@ -7,3 +7,4 @@ edition = "2021"
 anyhow = "1.0.56"
 is31fl3731 = {version = "1.0.0", features = ["charlie_bonnet"]}
 rppal = {version = "0.13.1", features = ["hal"]}
+chrono = "0.4.19"
