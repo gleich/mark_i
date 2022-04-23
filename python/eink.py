@@ -3,7 +3,7 @@ from PIL import ImageFont, Image, ImageDraw
 import time
 
 def main():
-    display = inky.auto()
+    display = inky.InkyPHAT_SSD1608('black')
     x = 0
     print("Started eink module")
     while True:
