@@ -1,0 +1,15 @@
+[Unit]
+Description=LEDS Service
+
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/leds.py
+Restart=always
+RestartSec=5
+KillMode=process
+User=pi
+
+[Install]
+WantedBy=multi-user.target

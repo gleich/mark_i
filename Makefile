@@ -4,5 +4,6 @@ build-all:
 dev-deploy: build-all
 	scp python/eink.py pi@marki.local:~/eink.py
 	scp python/leds.py pi@marki.local:~/leds.py
-	scp target/armv7-unknown-linux-gnueabihf/debug/mark_1 pi@marki.local:~/mark_1
+	rsync -ravP ./services pi@marki.local:~
+	scp target/armv7-unknown-linux-gnueabihf/debug/mark_i pi@marki.local:~/mark_i
 

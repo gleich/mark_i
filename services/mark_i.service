@@ -1,0 +1,16 @@
+[Unit]
+Description=Main display program for MARK I
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/mark_i
+Restart=always
+RestartSec=5
+KillMode=process
+User=pi
+
+[Install]
+WantedBy=multi-user.target

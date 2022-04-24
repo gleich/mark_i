@@ -4,15 +4,16 @@ import colorsys
 import blinkt
 
 def main():
+    time.sleep(2)
     print("Started main method")
     blinkt.set_clear_on_exit()
     blinkt.set_brightness(0.1)
     while True:
-        # render_percent(psutil.cpu_percent() / 100)
-        render_percent(1)
+        render_percent(psutil.cpu_percent() / 100)
         time.sleep(0.001)
 
 def render_percent(percent: float) -> None:
+    blinkt.clear()
     x = round(percent * 8)
     for i in range(x):
         r, g, b = tuple(round(j * 255) for j in colorsys.hls_to_rgb(((abs(i - 7) / 8) * 120) / 360, 0.5, 1))
